@@ -27,15 +27,13 @@ class HomeScreen extends StatelessWidget {
                 SuspensionBridge().registerMethodCallHandler(
                   'userPostModuleChannel',
                   (method) {
-                    print('method.methodName: ${method.methodName}');
                     if (method.methodName == 'backPressEvent') {
-                      print('backPressEvent');
                       Navigator.of(context, rootNavigator: true).pop();
                     }
                   },
                 );
               },
-              child: Text('User Posts'),
+              child: const Text('User Posts'),
             ),
           ],
         ),
